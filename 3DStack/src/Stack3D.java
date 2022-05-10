@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class Stack3D {
 	
-    	
+    // Common attributes for a grocery store 3D stack object  	
  
 	private int height;
 	
@@ -28,12 +28,23 @@ public class Stack3D {
     private ArrayList <Product> stackNumRows;
     
     
+    // creating a garbage 3D stack object
+    
     public Stack3D() {
     	this.height = 0;
     	this.width = 0;
     	this.numRows = 0;
+    	
+    	this.stackHeight = null;
+    	
+    	this.stackWidth = null;
+    	
+    	this.stackNumRows = null;
+    	
     }
-	
+    
+    
+	// creating actual 3D stack storage object
 	
 	public Stack3D(int height, int width, int numRows) {
 		this.height = height;
@@ -53,6 +64,7 @@ public class Stack3D {
 	}
 
 	
+	// getters and setters for the instance variables
 	
 
 	public int getHeight() {
@@ -113,6 +125,75 @@ public class Stack3D {
 	public void setStackNumRows(ArrayList<Product> stackNumRows) {
 		this.stackNumRows = stackNumRows;
 	}
+	
+	
+	
+	// This are 3D version of stack operations 
+	// starting with the number of products which are inside the 3D stack storage
+	
+	
+	/**
+	 * Check if the 3D stack has products or not
+	 * @return status of number of products
+	 */
+	
+	public boolean emptyProduct() {
+		return this.stackNumRows.isEmpty();
+	}
+	
+	
+	/**
+	 * Looks at the object ar the front of product stack
+	 * @return the product at the front of the products stack
+	 */
+	
+	public Product peekProduct() {
+		return this.stackNumRows.get(0);
+	}
+	
+	
+	/**
+	 * Removes the product at the front of the stack
+	 * @return the product which was removed
+	 */
+	
+	
+    public Product popProduct() {
+    	
+    	Product poped = new Product(this.stackNumRows.get(0));
+    	
+    	this.stackNumRows.remove(0);
+    	
+    	return poped;
+    	
+    }
+    
+    /**
+     * Adds product at the front of the stack
+     * @param p
+     * @return the product which was added 
+     */
+    
+    public Product pushProduct(Product p) {
+    	this.stackNumRows.add(p);
+    	
+    	return p;
+    }
+    
+    
+    
+    
+    
+    
+	
+	
+	
+	
+	
+	
+	/**
+	 * String representation of the 3D stack object
+	 */
 
 
 	@Override
