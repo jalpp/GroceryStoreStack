@@ -52,6 +52,18 @@ public class Product {
 		this.productType = type;
 	}
 	
+	/**
+	Added copy constructor for the product class
+	*/
+	
+	
+	public Product(Product p) {
+		this.name = p.name;
+		this.stockNumber = p.stockNumber;
+		this.Brand = p.Brand;
+		this.productType = p.productType;
+	}
+	
 	
 	/**
 	 * Getter method for name of the product
