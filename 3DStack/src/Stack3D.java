@@ -180,7 +180,29 @@ public class Stack3D {
     	return p;
     }
     
+     
+    // This are Stack operations for adding 1 layer of cabinet to upper layer of stack
     
+    
+    
+    /**
+     * Returns true or false depending if the height of the 3D stack is zero
+     * @return
+     */
+    
+    public boolean emptyHeight() {
+    	return this.stackHeight.isEmpty();
+    }
+    
+    /**
+	 * Looks at the object at the next Upward Cabinet
+	 * @return the cabinet at the front of the next cabinet
+	 */
+    
+    
+    public Integer peekNextUpwardCabinet() {
+    	return this.stackHeight.get(0);
+    }
     
     
     
