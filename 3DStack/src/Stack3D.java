@@ -203,6 +203,24 @@ public class Stack3D {
     public Integer peekNextUpwardCabinet() {
     	return this.stackHeight.get(0);
     }
+	
+     /**
+     * Removes the cabinet at the front of the grocery storage stack, its the top most cabinet
+     */
+    
+    public void popCabinet() {
+    	this.stackHeight.remove(0);
+    }
+  
+    /**
+     * Adds a cabinet at the top most part of the storage stack
+     * @param add the cabinet that is being added
+     */
+  
+    public void pushCabinet(Integer add) {
+    	this.stackHeight.add(add);
+    }	
+	
     
     
     
