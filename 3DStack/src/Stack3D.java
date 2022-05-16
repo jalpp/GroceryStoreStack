@@ -221,6 +221,34 @@ public class Stack3D {
     	this.stackHeight.add(add);
     }	
 	
+	
+     
+    // This are Stack operations for adding 1 layer of cabinet to the side layer of the stack
+    
+    
+    /**
+     * Returns true or false depending if the width of the 3D stack is zero
+     * @return true or false 
+     */
+    
+    public boolean emptyWidth() {
+    	return this.stackWidth.isEmpty();
+    }
+    
+    
+    /**
+     * Looks at the next sideways Cabinet
+     * @return Integer value at the next cabinet
+     */
+    
+    
+    public Integer peekNextSideCabinet() {
+    	
+    	return this.stackWidth.get(0);
+    	
+    }	
+	
+	
     
     
     
