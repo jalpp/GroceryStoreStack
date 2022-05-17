@@ -246,7 +246,31 @@ public class Stack3D {
     	
     	return this.stackWidth.get(0);
     	
-    }	
+    }
+    
+    /**
+     * Removes the top first side cabinet
+     */
+    
+    
+    
+    public void popSideCabinet() {
+    	this.stackWidth.remove(0);
+    }
+    
+    /**
+     * Push Adds the given Integer to the front of the side cabinet
+     * @param add
+     */
+    
+    
+    public void pushSideCabinet(Integer add) {
+    	this.stackWidth.add(add);
+    }
+    	
+
+	
+	
 	
 	
     
